@@ -1,7 +1,9 @@
 import math
 
 def newton_rapshon(funcion,punto_a,punto_b,error_relativo):
-    """Esta funcion 
+    """Este metodo de newton rapshon consiste en aproximar una funcion f(x)
+        al punto p (raiz o cero) de f(x), mediante la generacion de una sucesion
+        {xi} tal que xi+1 = xi - f(xi)/f'(xi) ; f'(xi)!=0
 
     Args:
         funcion (_type_): _description_
@@ -30,16 +32,19 @@ def newton_rapshon(funcion,punto_a,punto_b,error_relativo):
         return xi,error_i
     return False
 
-
-def derivar_funcion(f, x, h=1e-5):
-    """
-    Aproxima la derivada de la función f en el punto x usando diferencias finitas.
     
-    :para f: Función a derivar.
-    :para x: Punto en el cual se evalúa la derivada.
-    :para h: Paso pequeño para la aproximación.
-    :return: Valor aproximado de la derivada.
-    """
+def derivar_funcion(f, x, h=1e-5):
+    """Este metodo deriva una funcion, utilizando la formula 
+        de la pendiente de la recta tangente 
+
+    Args:
+        f (_type_): Función a derivar.
+        x (_type_): Punto en el cual se evalúa la derivada.
+        h (_type_, optional): Una aproximacion de 0. Defaults to 1e-5.
+
+    Returns:
+        _type_: Valor aproximado de la derivada.
+    """    
     return (f(x + h) - f(x - h)) / (2 * h)
 
 if __name__ == "__main__":
