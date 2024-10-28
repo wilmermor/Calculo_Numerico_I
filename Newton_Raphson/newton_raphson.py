@@ -51,13 +51,13 @@ if __name__ == "__main__":
 
     # Testing...
 
-    f = lambda x: math.exp(x) - 3*x**2
+    f = lambda x: x**2 - 4
     a = 0
-    b = 1
-    er = 0.02
+    b = 3
+    er = 0.01
     result = newton_rapshon(f,a,b,er)
     if result != False:
-        print(result[0])
-        print(result[1])
+        print(f"\nResultado de f(x)= {result[0]}")
+        print(f"Error Relativo = {result[1]}")
     else:
-        print("la derivada da error")
+        print("La derivada es igual a cero")

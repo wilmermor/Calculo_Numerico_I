@@ -11,7 +11,7 @@ def Biseccion(funcion, Punto_A, Punto_B, Error_Relativo):
     Media = (Punto_A + Punto_B) / 2
 
     # Imprimimos los Datos Actuales de los Puntos A y B, la Media, Funcion Evaluada en la Media y el Error relativo
-    print("--"*80)
+    print("--"*50)
     print(f"{'Punto A':>10} {'Punto B':>15} {'Punto Medio':>15} {'F(Media)':>15} {'Error Relativo':>15}")
     print(f"{Punto_A:>10.5f} {Punto_B:>15.5f} {Media:>15.5f} {funcion(Media):>15.5f} {abs(Media - Punto_B) / Media:>15.5f}")
 
